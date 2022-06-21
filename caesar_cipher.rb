@@ -4,8 +4,8 @@ def caesar_cipher(string, num)
       return "Shift must be between 1-25"
     end
     
-    strArr = string.split("")
-    strArr.map! do |char|
+    str_arr = string.split("")
+    str_arr.map! do |char|
       if char.match(/[[:upper:]]/)
         char = char.ord
           if char <= 90-num
@@ -24,6 +24,6 @@ def caesar_cipher(string, num)
         char = char.ord
       end
     end 
-    strArr.map! {|char| char = char.chr}
-    strArr.join("")
+    str_arr.map! {|char| char = char.chr}
+    str_arr.join("")
   end
